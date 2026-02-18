@@ -16,7 +16,7 @@ int ledPin = 13;    ///< LED connected to digital pin 13
 /**
  * @brief Initializes serial communication and pin modes.
  *
- * This function runs once at startup.
+ * This function runs once at startup. 
  * - Starts Serial communication at 9600 baud rate
  * - Sets touchPin as INPUT
  * - Sets ledPin as OUTPUT
