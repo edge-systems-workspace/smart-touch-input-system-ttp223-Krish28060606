@@ -26,3 +26,25 @@ void setup() {
   pinMode(touchPin, INPUT);
   pinMode(ledPin, OUTPUT);
 }
+/**
+ * @brief Continuously monitors the touch sensor.
+ *
+ * If touch is detected (LOW signal):
+ *  - LED turns ON
+ *  - Prints "object detected"
+ *
+ * If no touch is detected:
+ *  - LED turns OFF
+ *  - Prints "not detected"
+ */
+void loop() {
+  int state = digitalRead(touchPin);
+
+  if (state == LOW) {
+    digitalWrite(ledPin, HIGH);
+    Serial.println("object detected");
+  } else {
+    digitalWrite(ledPin, LOW);
+    Serial.println("not detected");
+  }
+}
